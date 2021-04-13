@@ -3,11 +3,21 @@ import "./Hero.css";
 function Hero() {
     return (
         <div className="heroPage">
-            <div class="one"></div>
+            <div className="one"></div>
 
-            <div class="two">
+            <div className="two">
                 <div className = "welcomeBox">
-                        Welcome to Meds Connect
+                    <div className ="welcomeText">
+                        Welcome to
+                    </div>
+                    <br></br>
+                    <div className="medsText">
+                        Meds Connect
+                    </div>
+                    <br></br>
+                    <div className="solutionText">
+                        Your solution for managing hospital problems
+                    </div>
                 </div>
             </div>
         </div>

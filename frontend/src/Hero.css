@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Roboto:wght@100&display=swap');
 .heroPage {
   position: relative;
   width: 100%;
@@ -36,9 +37,49 @@
   -webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
   clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
 }
-.welcomeBox{
-    color: #FFF;
-    font-size: 48px;
-    float: right;
-    font-family: 'Cormorant Garamond', serif;
+.welcomeBox {
+  position: absolute;
+  top: 40%;
+  right: 20%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: clamp(18px, 1.5vw, 36px);
+}
+.welcomeText, .medsText{
+  float: right;
+}
+.welcomeText{
+  font-style: italic;
+  font-family: "Playfair Display", serif;
+}
+.medsText{
+  line-height: 0.2;
+  font-family: 'Cormorant Garamond', sans-serif;
+  font-size: clamp(60px, 4.5vw, 80px);
+}
+.solutionText{
+  text-align: right;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: clamp(12px, 1vw, 18px);
+}
+
+@media (max-width: 1200px){
+  .welcomeBox{
+    right: 10%;
+  }
+}
+
+
+@media (max-width: 900px){
+  .welcomeBox{
+    right: 5%;
+  }
+  .solutionText, .medsText, .welcomeText{
+    width: 100%;
+    text-align: center;
+  }
+  .medsText{
+    line-height: 0.8;
+  }
 }
