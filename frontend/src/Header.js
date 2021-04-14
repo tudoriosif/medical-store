@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Header.css";
 import {FaHospital} from 'react-icons/fa';
+
 function Header() {
     return (
         <nav id="header" className="header">
@@ -11,17 +12,22 @@ function Header() {
             <div className="link-list">
                 <ul className="links">
                     <li className="link">
-                        <a href="/">
+                        <a>
                             Home
                         </a>
                     </li>
                     <li className="link">
-                        <a href="/aboutus">
+                        <a>
                             About us
                         </a>
                     </li>
                     <li className="link">
-                        <a href="/login">
+                        <a>
+                            Contact
+                        </a>
+                    </li>
+                    <li className="link">
+                        <a >
                             Login
                         </a>
                     </li>
