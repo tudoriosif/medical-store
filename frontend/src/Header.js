@@ -17,7 +17,7 @@ function Header() {
                         </a>
                     </li>
                     <li className="link">
-                        <a>
+                        <a href="#aboutus">
                             About us
                         </a>
                     </li>
