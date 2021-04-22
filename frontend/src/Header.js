@@ -12,22 +12,22 @@ function Header() {
             <div className="link-list">
                 <ul className="links">
                     <li className="link">
-                        <a>
+                        <a href="/">
                             Home
                         </a>
                     </li>
                     <li className="link">
-                        <a href="#aboutus">
+                        <a href="/#aboutus">
                             About us
                         </a>
                     </li>
                     <li className="link">
-                        <a>
+                        <a href="/">
                             Contact
                         </a>
                     </li>
                     <li className="link">
-                        <a >
+                        <a href="/login">
                             Login
                         </a>
                     </li>
