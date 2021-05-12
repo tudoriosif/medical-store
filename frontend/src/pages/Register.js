@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
-import "./Register.css";
+import "../styles/Register.css";
 
 function Register() {
   const [stateRegister, setStateRegister] = useState({
