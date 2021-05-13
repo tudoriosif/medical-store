@@ -1,5 +1,5 @@
 import React from "react";
-import { FaHospital, FaUserMd } from "react-icons/fa";
+import { FaHospital, FaUserMd, FaShoppingCart, FaBox} from "react-icons/fa";
 import "../styles/DashNav.css";
 function DashNav() {
   return (
@@ -12,10 +12,10 @@ function DashNav() {
         <div className="link-list">
           <ul className="links">
             <li className="link">
-              <a href="/dashboard/shop">Shop</a>
+              <a href="/dashboard/shop"><FaShoppingCart size={32} className="profile-icon" /></a>
             </li>
             <li className="link">
-              <a href="/dashboard/stock">Stock</a>
+              <a href="/dashboard/stock"><FaBox size={28} className="profile-icon" /></a>
             </li>
             <li className="link">
               <a href="/dashboard">
