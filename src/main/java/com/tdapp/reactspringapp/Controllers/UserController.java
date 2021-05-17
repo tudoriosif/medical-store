@@ -17,9 +17,17 @@ public class UserController {
     }
 
     @GetMapping("/login/process")
-    public String getUser(@RequestBody UserDTO userDTO) {
+    public UserDTO getUser(@RequestBody UserDTO userDTO) {
         UserDTO userDTOService = userService.getUser(userDTO);
-        return userDTOService.getEmail() == null ? "Login failed, user don't exists" : "Login successfully";
+
+        return userDTOService;
+    }
+
+    @GetMapping("/login/process/{email}")
+    public UserDTO getUserByEmail(@PathVariable("email") String email){
+        UserDTO userDTOService = userService.getUserByEmail(email);
+
+        return userDTOService;
     }
 
     @PostMapping("/register/process")

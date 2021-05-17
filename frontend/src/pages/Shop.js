@@ -15,7 +15,7 @@ function Shop() {
     <div className="shop-container">
       <h2 className="shop-text">Medical Products</h2>
       <div className="cards">
-        {products.map((product) => <Card data={product} />)}
+        {products.map((product, index) => <Card data={product} key={index} />)}
         <div className="blank-space"></div>
       </div>
     </div>

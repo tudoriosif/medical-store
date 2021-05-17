@@ -64,4 +64,14 @@ public class UserService {
         return userDTO1;
     }
 
+    public UserDTO getUserByEmail(String email) {
+        User user = userRepository.findByEmail(email);
+
+        UserDTO userDTO = new UserDTO();
+        userDTO.setId(user.getId());
+        userDTO.setEmail(user.getEmail());
+        userDTO.setPassword(user.getPassword());
+        userDTO.setUsername(user.getUsername());
+        return userDTO;
+    }
 }

@@ -11,7 +11,7 @@ function Card(props) {
           ></img>
           <div className="product-description">
             <h1 className="product-title">{productData.name}</h1>
-            <h3 class="product-details">see details</h3>
+            <h3 className="product-details">see details</h3>
             <div className="description">
               <p>
                 {productData.description}
@@ -19,7 +19,7 @@ function Card(props) {
             </div>
             <form action="" className="add-form">
               <div className="qty-input">
-                <label for="qty">Quantity available:</label>
+                <label htmlFor="qty">Quantity available:</label>
                 <input type="text" name="qty" className="qty" placeholder={productData.qty} />
               </div>
               <button className="add-btn">Add to cart</button>
