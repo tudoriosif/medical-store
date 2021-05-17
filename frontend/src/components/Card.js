@@ -20,7 +20,7 @@ function Card(props) {
             <form action="" className="add-form">
               <div className="qty-input">
                 <label for="qty">Quantity available:</label>
-                <input type="text" name="qty" className="qty" value={productData.qty} />
+                <input type="text" name="qty" className="qty" placeholder={productData.qty} />
               </div>
               <button className="add-btn">Add to cart</button>
             </form>
