@@ -32,7 +32,8 @@ function Login() {
       .then((res) => res.json()) // Primul request returnat de back end pe care il transformam in json
       .then((res) => {
         if (res.password === password && res.email === email) { // verificam daca corespunde back-end cu front-end
-
+          // pentru ca nu facem tot timpul acest request salvam loginul userului in localStorage de unde il putem prelua
+          localStorage.setItem("user", JSON.stringify(res));
           // trimitem la endpointul de dashboard datele userului provenite de la backend
           history.push({
             pathname: "/dashboard",
