@@ -5,22 +5,25 @@ function Card(props) {
     const [productData, setProductData] = useState(props.data);
     return (
         <div className="card">
+          {
+            console.log(productData)
+          }
           <img
-            src={productData.url}
-            alt={productData.description}
+            src={productData.imagineProdus}
+            alt={productData.descriereProdus}
           ></img>
           <div className="product-description">
-            <h1 className="product-title">{productData.name}</h1>
+            <h1 className="product-title">{productData.numeProdus}</h1>
             <h3 className="product-details">see details</h3>
             <div className="description">
               <p>
-                {productData.description}
+                {productData.descriereProdus}
               </p>
             </div>
             <form action="" className="add-form">
               <div className="qty-input">
                 <label htmlFor="qty">Quantity available:</label>
-                <input type="text" name="qty" className="qty" placeholder={productData.qty} />
+                <input type="text" name="qty" className="qty" placeholder={productData.cantitateProdus} max={productData.cantitateProdus} min={1} />
               </div>
               <button className="add-btn">Add to cart</button>
             </form>
