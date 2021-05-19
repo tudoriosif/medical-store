@@ -5,9 +5,6 @@ function Card(props) {
     const [productData, setProductData] = useState(props.data);
     return (
         <div className="card">
-          {
-            console.log(productData)
-          }
           <img
             src={productData.imagineProdus}
             alt={productData.descriereProdus}

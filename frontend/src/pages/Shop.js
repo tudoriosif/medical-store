@@ -28,7 +28,6 @@ function Shop() {
   // React Hook care se executa dupa randarea paginii
   useEffect(() => {
     getProducts();
-    console.log(products);
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Conditie suplimentara care verifica daca s-au incarcat produsele din baza de date
@@ -50,7 +49,6 @@ function Shop() {
     </div>
   ) : (
     <div className="shop-container">
-      {console.log(products)}
       <h2 className="shop-text">Medical Products</h2>
       <div className="cards">
         {products.map((product, index) => (

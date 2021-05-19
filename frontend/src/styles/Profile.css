@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400&display=swap');
+.profile-container{
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 8vh - 20px);
+    overflow:hidden;
+    font-family: 'Raleway', sans-serif;
+}
+
+.profile-card{
+    width: 70%;
+    max-width: 350px;
+    margin: 0 auto;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-radius: 10px;
+    padding: 0 50px 40px 50px;
+}
+
+.avatar-container{
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
+}
+
+.data-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.data-container input{
+    padding: 5px 2%;
+    border: 1px solid rgb(82, 82, 82);
+    border-radius: 5px;
+}
+
+.profile-avatar{
+    color: #EA2027;
+}
+
+.connection-status{
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px 15px;
+    border: none;
+    background-color: #EA2027;
+    color: #FFF;
+    border-radius: 25px;
+}
+
+.data-label{
+    padding-top: 20px;
+}

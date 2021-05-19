@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import DashNav from "../components/DashNav";
 import Shop from "./Shop";
 import Stock from "./Stock";
+import Profile from "./Profile";
 import { Route, Switch, useHistory } from "react-router-dom";
 
 function Dashboard(props) {
@@ -20,7 +21,7 @@ function Dashboard(props) {
     <div>
       <DashNav />
       <Switch>
-        <Route exact path="/dashboard" component={Shop} />
+        <Route exact path="/dashboard" render={() => <Profile user={user}/>}/>
         <Route path="/dashboard/shop" component={Shop} />
         <Route path="/dashboard/stock" component={Stock} />
       </Switch>
