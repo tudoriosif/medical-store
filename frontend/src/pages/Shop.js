@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaSpinner } from "react-icons/fa";
 import Card from "../components/Card";
+import SideMenu from "../components/SideMenu";
 import "../styles/Shop.css";
 
 function Shop() {
@@ -54,6 +55,7 @@ function Shop() {
         {products.map((product, index) => (
           <Card data={product} key={index} />
         ))}
+        <SideMenu/>
         <div className="blank-space"></div>
       </div>
     </div>
