@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import AddProduct from "./AddProduct";
+import RemoveProduct from "./RemoveProduct";
 import { FaPlusCircle, FaTimesCircle } from "react-icons/fa";
 import "../styles/SideMenu.css";
 
@@ -20,7 +21,7 @@ function SideMenu() {
   const showFormRemove = () => {
     return (
       <div className="operation-form">
-        
+        <RemoveProduct />
       </div>
     );
   };

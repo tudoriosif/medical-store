@@ -25,6 +25,7 @@
     position: fixed;
     right: 100px;
     width: 400px;
+    max-height: calc(100vh - 8vh - 70px);;
     background-color: #FFF;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     border-radius: 10px;
@@ -40,7 +41,7 @@
 .add-inner{
     text-align: center;
     width: 70%;
-    margin: 50px auto 20px auto;
+    margin: 20px auto 20px auto;
     padding: 0 3%;
     color: #EA2027;
     font-family: 'Roboto', sans-serif;
