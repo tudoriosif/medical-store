@@ -3,6 +3,7 @@ package com.tdapp.reactspringapp.Entities;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Data
@@ -21,4 +22,6 @@ public class User {
 
     @Column(name="email")
     private String email;
+
+
 }
