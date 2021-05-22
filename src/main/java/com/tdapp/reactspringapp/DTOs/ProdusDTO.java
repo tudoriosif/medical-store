@@ -5,7 +5,7 @@ import lombok.Data;
 public class ProdusDTO {
     private Long id;
     private String numeProdus;
-    private Long pretProdus;
+    private Double pretProdus;
     private String imagineProdus;
     private Long cantitateProdus;
     private String descriereProdus;

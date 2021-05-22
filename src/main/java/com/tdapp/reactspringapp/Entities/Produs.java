@@ -16,7 +16,7 @@ public class Produs {
     private String numeProdus;
 
     @Column(name="pret_produs")
-    private Long pretProdus;
+    private Double pretProdus;
 
     @Column(name="imagine_produs")
     private String imagineProdus;

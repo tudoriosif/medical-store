@@ -23,6 +23,7 @@
 .link{
     display: inline-block;
     list-style-type: none;
+    transition: 300ms all ease-in;
 }
 .link a{
     font-family: 'Roboto', sans-serif;
@@ -30,4 +31,8 @@
     text-decoration: none;
     padding: 0 50px;
     color: #EA2027;
+}
+
+.link:hover{
+    transform: scale(1.1);
 }

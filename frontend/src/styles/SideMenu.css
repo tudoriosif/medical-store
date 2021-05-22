@@ -1,0 +1,48 @@
+.sidemenu-container{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 20px;
+}
+
+.add-button, .remove-button{
+    color: #EA2027;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: 300ms all ease-in;
+}
+
+.add-button:hover, .remove-button:hover{
+    transform: scale(1.1);
+}
+
+.remove-button{
+    margin-top: 10px;
+}
+
+.operation-form{
+    position: fixed;
+    right: 100px;
+    width: 400px;
+    max-height: calc(100vh - 8vh - 70px);;
+    background-color: #FFF;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-radius: 10px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.operation-form::-webkit-scrollbar{
+    display: none;
+}
+
+.add-inner{
+    text-align: center;
+    width: 70%;
+    margin: 20px auto 20px auto;
+    padding: 0 3%;
+    color: #EA2027;
+    font-family: 'Roboto', sans-serif;
+}

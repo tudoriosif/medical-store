@@ -14,7 +14,6 @@ function Register() {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log(details);
     const url = "/register/process";
     fetch(url, {
       method: "post",
@@ -26,7 +25,6 @@ function Register() {
     })
       .then((res) => res.json())
       .then((res) => {
-          console.log(res);
           if(res.username === details.username){
               setStateRegister({isSuccessfull: true});
           }

@@ -107,4 +107,7 @@ public class ProdusService {
         produsRepository.deleteById(idP);
     }
 
+    public Long deleteProduct(String numeProdus){
+        return produsRepository.deleteByNumeProdus(numeProdus);
+    }
 }
