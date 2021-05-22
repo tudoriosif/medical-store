@@ -102,6 +102,18 @@ public class ProdusService {
         return produsDTO;
     }
 
+    // Metoda conversie din DTO in Entitate Produs pentru relatia ManyToMany care necesita o entitate Produs
+    public Produs convertDTOProdus(ProdusDTO produsDTO){
+        Produs produs = new Produs();
+        produs.setCantitateProdus(produsDTO.getCantitateProdus());
+        produs.setNumeProdus(produsDTO.getNumeProdus());
+        produs.setDescriereProdus(produsDTO.getDescriereProdus());
+        produs.setImagineProdus(produsDTO.getImagineProdus());
+        produs.setPretProdus(produsDTO.getPretProdus());
+        produs.setId(produsDTO.getId());
+        return produs;
+    }
+
     //Stergere Produs in functie de id
     public void deleteProduct(Long idP){
         produsRepository.deleteById(idP);

@@ -1,6 +1,8 @@
 package com.tdapp.reactspringapp.Services;
 
+import com.tdapp.reactspringapp.DTOs.ProdusDTO;
 import com.tdapp.reactspringapp.DTOs.UserDTO;
+import com.tdapp.reactspringapp.Entities.Produs;
 import com.tdapp.reactspringapp.Entities.User;
 import com.tdapp.reactspringapp.Repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -65,6 +67,17 @@ public class UserService {
         return userDTO1;
     }
 
+    public UserDTO getUserById(Long userId) {
+        User user = userRepository.findUserById(userId);
+
+        UserDTO userDTO = new UserDTO();
+        userDTO.setId(user.getId());
+        userDTO.setEmail(user.getEmail());
+        userDTO.setPassword(user.getPassword());
+        userDTO.setUsername(user.getUsername());
+        return userDTO;
+    }
+
     public UserDTO getUserByEmail(String email) {
         User user = userRepository.findByEmail(email);
 
@@ -74,5 +87,15 @@ public class UserService {
         userDTO.setPassword(user.getPassword());
         userDTO.setUsername(user.getUsername());
         return userDTO;
+    }
+
+    // Metoda conversie din DTO in Entitate User pentru relatia ManyToMany care necesita o entitate User
+    public User convertDTOUser(UserDTO userDTO){
+        User user = new User();
+        user.setId(userDTO.getId());
+        user.setEmail(userDTO.getEmail());
+        user.setPassword(userDTO.getPassword());
+        user.setUsername(userDTO.getUsername());
+        return user;
     }
 }
