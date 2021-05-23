@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 function ProfileData(props) {
+  
+  // eslint-disable-next-line
   const [user, setUser] = useState(props.user);
 
   return (

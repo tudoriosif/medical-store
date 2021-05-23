@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { FaSpinner } from "react-icons/fa";
 import Card from "../components/Card";
 import SideMenu from "../components/SideMenu";
+import Loading from '../components/Loading';
 import "../styles/Shop.css";
 
-function Shop() {
+function Shop(props) {
   // Variabila de stare in care stocam produsele
   const [products, setProducts] = useState(null);
 
@@ -33,27 +33,13 @@ function Shop() {
 
   // Conditie suplimentara care verifica daca s-au incarcat produsele din baza de date
   return !products ? (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        width: "100%",
-        height: "calc(100vh - 8vh - 20px)",
-      }}
-    >
-      <FaSpinner
-        size={100}
-        className="loading-icon"
-        style={{ color: "#ea2027" }}
-      />
-    </div>
+    <Loading />
   ) : (
     <div className="shop-container">
       <h2 className="shop-text">Medical Products</h2>
       <div className="cards">
         {products.map((product, index) => (
-          <Card data={product} key={index} />
+          <Card data={product} key={index} user={props.user} />
         ))}
         <SideMenu/>
         <div className="blank-space"></div>
