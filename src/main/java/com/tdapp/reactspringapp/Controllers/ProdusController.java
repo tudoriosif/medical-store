@@ -35,8 +35,8 @@ public class ProdusController {
     //update product
    @PutMapping("/dashboard/shop/update/process/{idProdus}")
     public ProdusDTO updateProduct(@RequestBody ProdusDTO produsDTO,@PathVariable("idProdus") Long idProdus){
-        produsService.uptadeProduct(produsDTO,idProdus);
-        return produsService.uptadeProduct(produsDTO,idProdus);
+        produsService.updateProduct(produsDTO,idProdus);
+        return produsService.updateProduct(produsDTO,idProdus);
     }
 
    //delete product

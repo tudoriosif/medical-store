@@ -8,9 +8,11 @@ import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
+    // Implementare sistem de routing
     <Router>
       <div className="App">
           <Switch>
+              {/* In functie de path-ul pe care intram se va randa componenta pagina respectiva */}
               <Route exact path="/"  component={HomePage}/>
               <Route path="/login"  component={Login}/>
               <Route path="/register"  component={Register}/>

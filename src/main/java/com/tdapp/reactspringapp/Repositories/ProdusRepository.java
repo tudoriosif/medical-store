@@ -13,4 +13,5 @@ import javax.transaction.Transactional;
 public interface ProdusRepository extends CrudRepository<Produs, Long> {
     @Transactional // Cand facem delete in JPA avem nevoie de tranzactii si sa ne asiguram ca sunt functionale
     Long deleteByNumeProdus(String numeProdus);
+    // Returneaza numarul rows-urilor afectate
 }

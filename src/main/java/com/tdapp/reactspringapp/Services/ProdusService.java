@@ -18,8 +18,8 @@ public class ProdusService {
     public ProdusService(ProdusRepository produsRepository){
         this.produsRepository = produsRepository;
     }
-  //Afisare produse
-  public List<ProdusDTO> getAllProducts(){
+    // Afisare produse
+    public List<ProdusDTO> getAllProducts(){
       List<Produs> produse= (List<Produs>) produsRepository.findAll();
       List<ProdusDTO> produsDTOList=new ArrayList<>();
 
@@ -37,9 +37,9 @@ public class ProdusService {
 
       }
       return produsDTOList;
-  }
-    //CRUD
-    //Creare Produs
+    }
+    // CRUD
+    // Creare Produs
     public ProdusDTO createProduct(ProdusDTO produsDTO) {
         List<Produs> produse =  (List<Produs>) produsRepository.findAll();
         for(Produs produs : produse) {
@@ -75,7 +75,7 @@ public class ProdusService {
 
         return produsDTO1;
     }
-     //Citeste un anumit produs dupa id
+    // Citeste un anumit produs dupa id
     public ProdusDTO getProductbyId(Long idP){
          ProdusDTO produsDTO= new ProdusDTO();
         Produs produs=produsRepository.findById(idP).get();
@@ -89,9 +89,9 @@ public class ProdusService {
     }
 
 
- //Update Produs in functie de id
-    public ProdusDTO uptadeProduct(ProdusDTO produsDTO, Long idP){
-       Produs produsU=produsRepository.findById(idP).get();
+    // Update Produs in functie de id
+    public ProdusDTO updateProduct(ProdusDTO produsDTO, Long idP){
+        Produs produsU = produsRepository.findById(idP).get();
       produsU.setNumeProdus(produsDTO.getNumeProdus());
       produsU.setPretProdus(produsDTO.getPretProdus());
       produsU.setImagineProdus(produsDTO.getImagineProdus());
@@ -99,7 +99,7 @@ public class ProdusService {
       produsU.setDescriereProdus(produsDTO.getDescriereProdus());
 
       produsRepository.save(produsU);
-        return produsDTO;
+      return produsDTO;
     }
 
     // Metoda conversie din DTO in Entitate Produs pentru relatia ManyToMany care necesita o entitate Produs
@@ -114,11 +114,12 @@ public class ProdusService {
         return produs;
     }
 
-    //Stergere Produs in functie de id
+    // Stergere Produs in functie de id
     public void deleteProduct(Long idP){
         produsRepository.deleteById(idP);
     }
 
+    // Stergere Produs dupa nume
     public Long deleteProduct(String numeProdus){
         return produsRepository.deleteByNumeProdus(numeProdus);
     }

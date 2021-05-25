@@ -80,8 +80,11 @@ public class StocService {
     //stergere element in stoc
     //se face update si la cantitatea produsului din tabelul produs
     public boolean removeByProdusId(Long produsId,Long stocId){
+        // Preluam din baza de date stoc-ul corespunzator produsului pe care dorim sa-l stergem
         Stoc stoc=stocRepository.cantitateaStoc(produsId,stocId);
+        // Restabilim cantitatea in baza de date a produsului + cantitatea deja aflata in stoc
         stocRepository.setCantitate(stoc.getProdus().getCantitateProdus()+ stoc.getCantitate(),stoc.getProdus().getId());
+        // Stergem stoc-ul din baza de date
         stocRepository.removeByProdusId(produsId,stocId);
         return true;
     }
